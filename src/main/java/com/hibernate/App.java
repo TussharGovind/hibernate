@@ -18,6 +18,8 @@ public class App
         s1.setsAge(30);
 
         Configuration cfg = new Configuration();
+        cfg.addAnnotatedClass(com.hibernate.Student.class);
+        cfg.configure();
         SessionFactory sf = cfg.buildSessionFactory();
         Session session = sf.openSession();
 
